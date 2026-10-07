@@ -4,7 +4,7 @@ import hmac
 # Original message
 message = b"Cryptology and coding theory protect digital communication."
 
-# Modified message - one character changed
+# Modified message - d to D
 modified_message = b"Cryptology and coding theory protect Digital communication."
 
 # Secret key
@@ -20,18 +20,18 @@ def verify_hmac(key: bytes, message: bytes, tag: bytes) -> bool:
     expected = make_hmac(key, message)
     return hmac.compare_digest(expected, tag)
 
-# Compute SHA-256 hashes
+# Compute SHA-256 hash
 original_hash = sha256_digest(message)
 modified_hash = sha256_digest(modified_message)
 
-# Compute HMAC-SHA256 tags
+# Compute HMAC-SHA256 tag
 original_hmac = make_hmac(key, message)
 modified_hmac = make_hmac(key, modified_message)
 
 # HMAC verification
 original_verification = verify_hmac(key, message, original_hmac)
 
-# Modified message checked using the ORIGINAL tag
+# Modified message check using the ORIGINAL tag
 modified_verification = verify_hmac(key, modified_message, original_hmac)
 
 

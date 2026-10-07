@@ -10,7 +10,7 @@ def aes_cbc_encrypt(key: bytes, plaintext: bytes):
     """Return (iv, ciphertext)."""
     iv = get_random_bytes(AES.block_size)           #generating a random 16 byte IV
     cipher = AES.new(key, AES.MODE_CBC, iv)         #CBC cipher
-    padded = pad(plaintext, AES.block_size)         #padding
+    padded = pad(plaintext, AES.block_size)       
     ciphertext = cipher.encrypt(padded)         #encrypting
     return iv, ciphertext
 
@@ -55,7 +55,7 @@ def aes_ctr_roundtrip(key: bytes, plaintext: bytes):
 # DEMO
 # ============================================================
 if __name__ == "__main__":
-    key = get_random_bytes(16)                                    # AES-128 key
+    key = get_random_bytes(16)                                   
     plaintext = b"Cryptology and coding theory protect digital communication."
 
     print("Original message :", plaintext.decode())

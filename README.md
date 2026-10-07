@@ -1,7 +1,7 @@
 # CSC 3114: Cryptology and Coding Theory
 ## Take-Home Assignment — Test 2
 
-This repository contains the group work for **CSC 3114: Cryptology and Coding Theory — Take-Home Assignment (Test 2)**.
+This repository contains the group work for **CSC 3114: Cryptology and Coding Theory (Test 2)**.
 
 The assignment constitutes of practical work on:
 
@@ -15,7 +15,7 @@ The assignment constitutes of practical work on:
 - Cryptographic tampering experiments
 
 
-**Programming language:** Python
+**Programming language used:** Python
 
 ---
 

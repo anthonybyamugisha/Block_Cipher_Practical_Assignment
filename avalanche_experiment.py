@@ -74,7 +74,7 @@ for n, pos in enumerate(flip_positions, start=1):
     pct = changed / BLOCK_BITS * 100
     rows.append((n, pos, changed, pct))
 
-# ---- table
+#  table
 header = f"{'Trial':<6}{'Flipped bit':<13}{'Changed bits':<14}{'% changed':<10}"
 print(header)
 print("-" * len(header))
@@ -87,14 +87,13 @@ avg = sum(pcts) / len(pcts)
 print(f"Average % of ciphertext bits changed: {avg:.2f}%  (over {len(rows)} flips)")
 print(f"Min: {min(pcts):.2f}%   Max: {max(pcts):.2f}%   Std dev: {statistics.pstdev(pcts):.2f}%")
 
-# ---- extra evidence: every possible single-bit flip
+# extra evidence: every possible single-bit flip
 all_pct = [avalanche_trial(encrypt_block, PLAINTEXT, i) / BLOCK_BITS * 100 for i in range(BLOCK_BITS)]
 print(f"Extra check: average over all 128 single-bit flips = {sum(all_pct)/128:.2f}%")
 
-# ---- save the table in a form that can be pasted into the report
+# save the table in a form that can be pasted into the report
 with open("results_table.md", "w", encoding="utf-8") as f:
     f.write("| Trial | Flipped bit | Changed bits | % changed |\n|---|---|---|---|\n")
     for n, pos, changed, pct in rows:
         f.write(f"| {n} | {pos} | {changed} | {pct:.2f} |\n")
     f.write(f"| **Average** | | | **{avg:.2f}** |\n")
-
