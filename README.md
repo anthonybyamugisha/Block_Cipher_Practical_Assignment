@@ -83,5 +83,5 @@ Task 4 demonstrates message integrity and authentication using:
 - SHA-256
 - HMAC-SHA256
 
-```text
+```text used
 Cryptology and coding theory protect digital communication.
