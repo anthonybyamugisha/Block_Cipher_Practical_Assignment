@@ -14,7 +14,6 @@ Instructions from the brief, and where each one is handled:
 
 import statistics
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-
 # ------------------------------------------------------------------ setup
 KEY = bytes.fromhex("9f3c7a1e5b8d2406c1e4a7b30d6f8952")   # 16 bytes = AES-128
 PLAINTEXT = b"Zebra#Quartz@904"                            # exactly 16 bytes = one block

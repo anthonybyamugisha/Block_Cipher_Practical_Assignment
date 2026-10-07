@@ -15,8 +15,7 @@ The assignment constitutes of practical work on:
 - Cryptographic tampering experiments
 
 
-**Programming language:** Python  
-**Final submission:** One PDF per group  
+**Programming language:** Python
 
 ---
 
@@ -36,9 +35,6 @@ This section covers:
 - Purpose of IVs and nonces
 - Common IV/nonce misuse
 
-This task is mainly theoretical and does not require a Python implementation.
-
----
 
 ## Task 2 — AES Avalanche Experiment
 

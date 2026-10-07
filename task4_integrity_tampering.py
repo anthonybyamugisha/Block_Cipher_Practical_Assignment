@@ -34,6 +34,7 @@ original_verification = verify_hmac(key, message, original_hmac)
 # Modified message checked using the ORIGINAL tag
 modified_verification = verify_hmac(key, modified_message, original_hmac)
 
+
 print("Original message:")
 print(message.decode())
 

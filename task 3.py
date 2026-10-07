@@ -85,12 +85,4 @@ if __name__ == "__main__":
     print("  Ciphertext (hex)  :", ct_ctr.hex())
     print("  Ciphertext length :", len(ct_ctr), "bytes")
     print("  Recovered text    :", pt_ctr.decode())       
-    print("  Match original    :", pt_ctr == plaintext) 
-
-
-    # ---------------- Observations ----------------
-    print("Observations:")
-    print(f"1. CBC ciphertext is {len(ct_cbc)} bytes (padded to a multiple")
-    print(f"   of 16); CTR ciphertext is {len(ct_ctr)} bytes (same as plaintext).")
-    print("2. CBC uses an IV + padding and chains blocks sequentially; CTR uses")
-    print("   a unique nonce/counter, needs no padding, and is parallelizable.")
+    print("  Match original    :", pt_ctr == plaintext)
